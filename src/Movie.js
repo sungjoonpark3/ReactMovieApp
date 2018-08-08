@@ -7,8 +7,18 @@ class Movie extends Component {
         title: PropTypes.string.isRequired,
         poster: PropTypes.string.isRequired
     }
+
+    componentWillMount(){
+        console.log('willMount')
+    }
+
+    componentDidMount(){
+        console.log('didMount')
+    }
+
+
     render() {
-        
+        console.log('didrender')
         return (
             <div>
                 <MoviePoster poster={this.props.poster}/>
